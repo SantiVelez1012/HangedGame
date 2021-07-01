@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -66,11 +67,21 @@ public class lectorPalabras {
     public String eleccionPalabra(ArrayList<String>palabras){
         Random aleatorio = new Random();
         
-        int posPalabra = aleatorio.nextInt(palabras.size()-1);
+        int posPalabra = aleatorio.nextInt(palabras.size());
         
         String palabra = palabras.get(posPalabra);
         
         return palabra;
+    }
+    
+    
+    public char[] conversionStringCharArray(String palabra){
+        char[] palabraCaracteres = new char[palabra.length()];
+        
+        palabraCaracteres = palabra.toCharArray();
+        
+        return palabraCaracteres;
+        
     }
 
     
